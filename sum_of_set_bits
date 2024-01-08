@@ -1,0 +1,13 @@
+import math
+def fun(n):
+    if n<=1:
+        return n
+    a=(int(math.log(n,2)))
+    b=(1<<a)
+    return fun(n-b)+(a*(b//2))+1+(n-b)
+
+t=int(input())
+while(t):
+    n=int(input())
+    print(fun(n))
+    t-=1
